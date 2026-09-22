@@ -30,12 +30,6 @@ export const teamMembers = [
     linkedin: "https://www.linkedin.com/in/ajay-kumar-48a706326/"
   },
   {
-    name: "Abhinav Harsh",
-    role: "Organizer",
-    img: "/assets/img/crew/team/abhinav.webp",
-    linkedin: "https://www.linkedin.com/in/abhinavharshdhn/"
-  },
-  {
     name: "Nitish Rathore",
     role: "Organizer",
     img: "/assets/img/crew/team/nitish.webp",

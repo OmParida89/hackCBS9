@@ -1,19 +1,19 @@
 export const overallPrizes = [
   {
     rank: "1ST PLACE",
-    amount: "TBD",
+    amount: "₹50,000",
     desc: "Cash prize for the national winner",
     logo: "/assets/img/themes_new/first.png"
   },
   {
     rank: "SECOND PLACE",
-    amount: "TBD",
+    amount: "₹35,000",
     desc: "Cash prize for the first runner-up",
     logo: "/assets/img/themes_new/second.png"
   },
   {
     rank: "THIRD PLACE",
-    amount: "TBD",
+    amount: "₹25,000",
     desc: "Cash prize for the second runner-up",
     logo: "/assets/img/themes_new/third.png"
   }
