@@ -649,7 +649,7 @@ export default function PrizesSection() {
       </div> */}
 
       {/* Benefits Card Banner */}
-      <div className="benefits style-card mt-5" style={{ width: '100%' }}>
+      {/*<div className="benefits style-card mt-5" style={{ width: '100%' }}>
         <div className="benefits-card" style={{ textAlign: 'center', padding: '30px' }}>
           <p style={{ color: '#fff', fontSize: '2.5rem', fontWeight: 700, margin: 0 }}>Benefits Worth $220,000</p>
           <p style={{ color: '#ccc', margin: '15px 0' }}>
@@ -659,7 +659,7 @@ export default function PrizesSection() {
             All Participants Eligible
           </span>
         </div>
-      </div>
+      </div>*/}
     </section>
   );
 }

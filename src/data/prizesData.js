@@ -1,6 +1,6 @@
 export const overallPrizes = [
   {
-    rank: "1ST PLACE",
+    rank: "FIRST PLACE",
     amount: "₹50,000",
     desc: "Cash prize for the national winner",
     logo: "/assets/img/themes_new/first.png"
