@@ -4,9 +4,9 @@ import React, { useEffect, useState } from 'react';
 const CONTACT_ITEMS = [
   {
     icon: 'fas fa-phone-volume',
-    name: 'Ronak Choudhary',
-    value: '+91 807 6831 757',
-    href: 'tel:+918076831757',
+    name: 'Om Parida',
+    value: '+91 86585 74552',
+    href: 'tel:+918658574552',
     color: '#3C9DFF'
   },
   {
@@ -18,9 +18,9 @@ const CONTACT_ITEMS = [
   },
   {
     icon: 'fas fa-phone-volume',
-    name: 'Gaurav Singh',
-    value: '+91 93369 49712',
-    href: 'tel:+919336949712',
+    name: 'Shreyas Yadav',
+    value: '+91 78001 36502',
+    href: 'tel:+917800136502',
     color: '#FF9C4A'
   }
 ];
