@@ -34,6 +34,11 @@ export const themesData = [
     card: "/assets/img/theme_cards/openinnovation.webp",
     color: "#7C5CFF"
   },
+  {
+    title: "Green Tech",
+    card: "/assets/img/theme_cards/greentech.webp",
+    color: "#54f89b"
+  }
   // {
   //   title: "Web3",
   //   card: "/assets/img/theme_cards/web3.webp",
