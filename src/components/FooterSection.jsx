@@ -247,11 +247,11 @@ export default function FooterSection() {
                       <a href="http://bit.ly/hackcbs_discord" target="_blank" rel="noopener noreferrer" className="resource_color">
                         <i className="fab fa-discord"></i> Discord
                       </a><br />
-                      <a href="https://t.me/joinchat/LlOuzVQ1_GSIbQ8oodUOwQ" target="_blank" rel="noopener noreferrer" className="resource_color">
-                        <i className="fab fa-telegram"></i> Telegram
+                      <a href="https://www.instagram.com/hackcbs/" target="_blank" rel="noopener noreferrer" className="resource_color">
+                        <i className="fab fa-instagram"></i> Instagram
                       </a><br />
-                      <a href="https://github.com/hackcbs" target="_blank" rel="noopener noreferrer" className="resource_color">
-                        <i className="fab fa-github"></i> Github
+                      <a href="https://www.linkedin.com/company/hackcbs" target="_blank" rel="noopener noreferrer" className="resource_color">
+                        <i className="fab fa-linkedin-in"></i> LinkedIn
                       </a>
                       <br />
                       <h3 className="footer-title" style={{ marginTop: '15px' }}>Policies</h3>
@@ -265,11 +265,11 @@ export default function FooterSection() {
                       <h3 className="footer-title">Social Connection</h3>
                       <p className="text">Follow us for latest updates:</p>
                       <ul className="list-inline lgx-social-footer">
-                        <li><a href="https://www.facebook.com/hackcbs/" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-f"></i></a></li>
-                        <li><a href="https://www.twitter.com/hackcbs/" target="_blank" rel="noopener noreferrer"><i className="fab fa-twitter"></i></a></li>
                         <li><a href="https://www.instagram.com/hackcbs/" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a></li>
                         <li><a href="https://www.linkedin.com/company/hackcbs" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin-in"></i></a></li>
+                        <li><a href="https://x.com/hackCBS" target="_blank" rel="noopener noreferrer" aria-label="X"><span style={{ fontWeight: 700, fontSize: '1.15em' }}>X</span></a></li>
                         <li><a href="http://bit.ly/hackCBS-YouTube" target="_blank" rel="noopener noreferrer"><i className="fab fa-youtube"></i></a></li>
+                        <li><a href="https://www.facebook.com/hackcbs/" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-f"></i></a></li>
                       </ul>
                     </div>
                   </div>
