@@ -267,7 +267,7 @@ export default function FooterSection() {
                       <ul className="list-inline lgx-social-footer">
                         <li><a href="https://www.instagram.com/hackcbs/" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a></li>
                         <li><a href="https://www.linkedin.com/company/hackcbs" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin-in"></i></a></li>
-                        <li><a href="https://x.com/hackCBS" target="_blank" rel="noopener noreferrer" aria-label="X"><span style={{ fontWeight: 700, fontSize: '1.15em' }}>X</span></a></li>
+                        <li><a href="https://x.com/hackCBS" target="_blank" rel="noopener noreferrer"><i className="fab fa-x-twitter"></i></a></li>
                         <li><a href="http://bit.ly/hackCBS-YouTube" target="_blank" rel="noopener noreferrer"><i className="fab fa-youtube"></i></a></li>
                         <li><a href="https://www.facebook.com/hackcbs/" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-f"></i></a></li>
                       </ul>
