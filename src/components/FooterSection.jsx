@@ -157,6 +157,34 @@ export default function FooterSection() {
             .f1c-name { font-size: 17px; }
             .f1c-value { font-size: 15px; }
           }
+
+          .lgx-social-footer > li {
+            opacity: 1;
+          }
+
+          .lgx-social-footer > li:nth-child(1) i {
+            color: #e4405f !important;
+          }
+
+          .lgx-social-footer > li:nth-child(2) i {
+            color: #0a66c2 !important;
+          }
+
+          .lgx-social-footer > li:nth-child(3) i {
+            color: #ffffff !important;
+          }
+
+          .lgx-social-footer > li:nth-child(4) i {
+            color: #ff0000 !important;
+          }
+
+          .lgx-social-footer > li:nth-child(5) i {
+            color: #1877f2 !important;
+          }
+
+          .lgx-social-footer:hover > li {
+            opacity: 1;
+          }
         `}</style>
 
         <div className="container">
