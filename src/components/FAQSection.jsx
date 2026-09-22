@@ -171,7 +171,7 @@ export default function FAQSection() {
               <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf" target="_blank" rel="noopener noreferrer">
                 <button className="cta">
                   <span className="hover-underline-animation" style={{ color: 'white', fontSize: '17px' }}>
-                    Code of Conduct
+                    MLH Code of Conduct
                   </span>
                   <svg
                     style={{ fill: 'white', marginLeft: '10px' }}
