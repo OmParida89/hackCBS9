@@ -115,7 +115,7 @@ export default function TeamSection() {
 
         {/* Mentors & Advisors */}
         <div className="section_title mt-5">
-          <h4 className="title-dark clr-white">Mentors</h4>
+          <h4 className="title-dark clr-white">Advisors</h4>
         </div>
         <CrewGrid members={mentors} />
 

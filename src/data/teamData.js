@@ -98,13 +98,13 @@ export const mentors = [
 export const teachers = [
   {
     name: "Dr Onkar Singh",
-    role: "Advisor",
+    role: "Teacher In-Charge",
     img: "/assets/img/crew/teachers/onkar.webp",
     linkedin: "https://www.linkedin.com/in/onkar-singh-0ab8282a/"
   },
   {
     name: "Dr Sonika Thakral",
-    role: "Advisor",
+    role: "Teacher In-Charge",
     img: "/assets/img/crew/teachers/sonika.webp",
     linkedin: "https://www.linkedin.com/in/sonika-thakral-b9279433/"
   }

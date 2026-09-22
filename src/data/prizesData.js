@@ -33,17 +33,23 @@ export const specialHacks = [
     logo: "/assets/img/themes_new/girl.png"
   },
   {
-    title: "Best Use of GenAI",
+    title: "Best Social Innovation",
     prize: "Cash Prize of INR 5,000",
     extra: "+ Swags and Goodies",
-    logo: "/assets/img/themes_new/genai.png"
-  },
-  {
-    title: "Best Blockchain Innovation",
-    prize: "Cash Prize of INR 5,000",
-    extra: "+ Swags and Goodies",
-    logo: "/assets/img/themes_new/blockchain.png"
-  }
+    logo: "/assets/img/themes_new/social_inno.png"
+  },  
+  //{
+  //  title: "Best Use of GenAI",
+  //  prize: "Cash Prize of INR 5,000",
+  //  extra: "+ Swags and Goodies",
+  //  logo: "/assets/img/themes_new/genai.png"
+  //},
+  //{
+  //  title: "Best Blockchain Innovation",
+  //  prize: "Cash Prize of INR 5,000",
+  //  extra: "+ Swags and Goodies",
+  //  logo: "/assets/img/themes_new/blockchain.png"
+  //}
 ];
 
 export const base44Prizes = [
