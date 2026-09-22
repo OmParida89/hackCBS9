@@ -24,7 +24,7 @@ export const specialHacks = [
     title: "Best Beginner Team",
     prize: "Cash Prize of INR 5,000",
     extra: "+ Swags and Goodies",
-    logo: "/assets/img/themes_new/ai-brain.png"
+    logo: "/assets/img/themes_new/beginner.png"
   },
   {
     title: "Best Girls Team",

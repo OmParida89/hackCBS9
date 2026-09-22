@@ -121,7 +121,7 @@ export default function TeamSection() {
 
         {/* Teacher In-Charge */}
         <div className="section_title mt-5">
-          <h4 className="title-dark clr-white">Teacher In-Charge</h4>
+          <h4 className="title-dark clr-white">Teachers In-Charge</h4>
         </div>
         <CrewGrid members={teachers} />
       </div>
