@@ -168,24 +168,33 @@ export default function ThemesSection() {
 
         @media (max-width: 480px) {
           .themes-section > .container {
-            padding-left: 16px;
-            padding-right: 16px;
+            padding-left: 24px;
+            padding-right: 24px;
           }
 
           .themes-grid {
-            gap: 18px;
+            gap: 20px;
           }
 
           .theme-card-back {
-            padding: 18px;
+            justify-content: center;
+            padding: 24px;
+            gap: 12px;
           }
 
           .theme-card-back-title {
-            font-size: 19px;
+            font-size: 24px;
+            line-height: 1.2;
           }
 
           .theme-card-back-description {
-            font-size: 12px;
+            font-size: 15px;
+            line-height: 1.5;
+          }
+
+          .theme-card-back-hint {
+            margin-top: 6px;
+            font-size: 10px;
           }
         }
       `}</style>
