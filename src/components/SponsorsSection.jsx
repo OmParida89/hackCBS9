@@ -332,9 +332,10 @@ export default function SponsorsSection() {
                   >
                     <option value="">Select an option</option>
                     <option value="Title Sponsor">Title Sponsor</option>
+                    <option value="Associate Sponsor">Associate Sponsor</option>
                     <option value="Gold Sponsor">Gold Sponsor</option>
                     <option value="Silver Sponsor">Silver Sponsor</option>
-                    <option value="Community Partner">Community Partner</option>
+                    <option value="Bronze Sponsor">Bronze Sponsor</option>
                     <option value="Other">Other</option>
                   </select>
                 </label>
@@ -347,7 +348,7 @@ export default function SponsorsSection() {
                     onChange={handleInputChange}
                     rows="4"
                     required
-                    placeholder="Tell us about your sponsorship requirements"
+                    placeholder="Tell us about your deliverables requirements, budget, and any other relevant information."
                   />
                 </label>
 
