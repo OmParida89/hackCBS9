@@ -275,13 +275,7 @@ export default function FooterSection() {
                       <a href="http://bit.ly/hackcbs_discord" target="_blank" rel="noopener noreferrer" className="resource_color">
                         <i className="fab fa-discord"></i> Discord
                       </a><br />
-                      <a href="https://www.instagram.com/hackcbs/" target="_blank" rel="noopener noreferrer" className="resource_color">
-                        <i className="fab fa-instagram"></i> Instagram
-                      </a><br />
-                      <a href="https://www.linkedin.com/company/hackcbs" target="_blank" rel="noopener noreferrer" className="resource_color">
-                        <i className="fab fa-linkedin-in"></i> LinkedIn
-                      </a>
-                      <br />
+                      
                       <h3 className="footer-title" style={{ marginTop: '15px' }}>Policies</h3>
                       <a href="/assets/docs/privacy-policy/PrivacyPolicy_hackCBS.pdf" target="_blank" rel="noopener noreferrer" className="resource_color">Privacy Policy</a><br />
                       <a href="/assets/docs/terms-of-service/" target="_blank" rel="noopener noreferrer" className="resource_color" style={{ whiteSpace: 'nowrap' }}>Terms of Service</a>
