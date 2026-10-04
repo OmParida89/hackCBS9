@@ -257,7 +257,6 @@ export default function FooterSection() {
                   <div className="col-md-2">
                     <div className="lgx-footer-single">
                       <h3 className="footer-title">Resources</h3>
-                      <a href="/assets/docs/hackCBS_proposal_9.pdf" target="_blank" rel="noopener noreferrer" className="resource_color">Sponsorship Brochure</a><br />
                       <a href="/assets/docs/Code_of_Conduct.pdf" target="_blank" rel="noopener noreferrer" className="resource_color">Code of Conduct</a>
                       <br />
                       <h3 className="footer-title" style={{ marginTop: '15px' }}>Archives</h3>
@@ -275,7 +274,7 @@ export default function FooterSection() {
                       <a href="http://bit.ly/hackcbs_discord" target="_blank" rel="noopener noreferrer" className="resource_color">
                         <i className="fab fa-discord"></i> Discord
                       </a><br />
-                      
+
                       <h3 className="footer-title" style={{ marginTop: '15px' }}>Policies</h3>
                       <a href="/assets/docs/privacy-policy/PrivacyPolicy_hackCBS.pdf" target="_blank" rel="noopener noreferrer" className="resource_color">Privacy Policy</a><br />
                       <a href="/assets/docs/terms-of-service/" target="_blank" rel="noopener noreferrer" className="resource_color" style={{ whiteSpace: 'nowrap' }}>Terms of Service</a>
