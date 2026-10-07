@@ -18,6 +18,10 @@
     <meta name="description"
         content="India's Biggest Student-run Hackathon | 31st October & 1st November 2026 | Proudly celebrated as Delhi University’s first-ever Hackathon-cum-Conference and Asia’s first MLH Member Hackathon | Prizes worth $220,000 USD, Unlimited Swag and much more." />
     <meta name="author" content="hackCBS" />
+    <meta name="keywords"
+        content="hackathon, hackathons in Delhi, hackathons in India, student hackathon, coding competition, technology events, developer events, innovation event, AI hackathon, offline hackathon, Delhi University hackathon, hackCBS 9.0" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <link rel="canonical" href="https://hackcbs.tech/" />
 
     <!-- Open Graph / Facebook / WhatsApp -->
     <meta property="og:type" content="website" />
@@ -25,6 +29,7 @@
     <meta property="og:title" content="hackCBS 9.0 | India's Largest Student-run Hackathon" />
     <meta property="og:description" content="India's Biggest Student-run Hackathon | 31st October & 1st November 2026 | Proudly celebrated as Delhi University's first-ever Hackathon-cum-Conference and Asia's first MLH Member Hackathon | Prizes worth $220,000 USD, Unlimited Swag and much more." />
     <meta property="og:image" content="https://hackcbs.tech/assets/img/9.0_assets/hackCBS9.0_logo_coloured.png" />
+    <meta property="og:image:alt" content="hackCBS 9.0 student hackathon logo" />
 
     <!-- Twitter / X -->
     <meta property="twitter:card" content="summary_large_image" />
@@ -32,36 +37,57 @@
     <meta property="twitter:title" content="hackCBS 9.0 | India's Largest Student-run Hackathon" />
     <meta property="twitter:description" content="India's Biggest Student-run Hackathon | 31st October & 1st November 2026 | Proudly celebrated as Delhi University's first-ever Hackathon-cum-Conference and Asia's first MLH Member Hackathon | Prizes worth $220,000 USD, Unlimited Swag and much more." />
     <meta property="twitter:image" content="https://hackcbs.tech/assets/img/9.0_assets/hackCBS9.0_logo_coloured.png" />
+    <meta property="twitter:image:alt" content="hackCBS 9.0 student hackathon logo" />
 
-    <!-- Event structured data -->
+    <!-- Search structured data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Event",
-      "name": "hackCBS 9.0",
-      "startDate": "2026-10-31",
-      "endDate": "2026-11-01",
-      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-      "eventStatus": "https://schema.org/EventScheduled",
-      "location": {
-        "@type": "Place",
-        "name": "Shaheed Sukhdev College of Business Studies",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "New Delhi",
-          "addressRegion": "Delhi",
-          "addressCountry": "IN"
+      "@graph": [
+        {
+          "@type": "Event",
+          "@id": "https://hackcbs.tech/#hackcbs-9",
+          "name": "hackCBS 9.0",
+          "url": "https://hackcbs.tech/",
+          "startDate": "2026-10-31",
+          "endDate": "2026-11-01",
+          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+          "eventStatus": "https://schema.org/EventScheduled",
+          "location": {
+            "@type": "Place",
+            "name": "Shaheed Sukhdev College of Business Studies",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "New Delhi",
+              "addressRegion": "Delhi",
+              "addressCountry": "IN"
+            }
+          },
+          "image": [
+            "https://hackcbs.tech/assets/img/9.0_assets/hackCBS9.0_logo_coloured.png"
+          ],
+          "description": "India's Largest Student Run Hackathon. Join us for 24 hours of building, learning, and hacking.",
+          "organizer": {
+            "@id": "https://hackcbs.tech/#organization"
+          }
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://hackcbs.tech/#organization",
+          "name": "Kronos - The Tech Society of SSCBS",
+          "url": "https://hackcbs.tech/",
+          "logo": "https://hackcbs.tech/assets/img/9.0_assets/hackCBS9.0_logo_coloured.png"
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://hackcbs.tech/#website",
+          "url": "https://hackcbs.tech/",
+          "name": "hackCBS 9.0",
+          "publisher": {
+            "@id": "https://hackcbs.tech/#organization"
+          }
         }
-      },
-      "image": [
-        "https://hackcbs.tech/assets/img/9.0_assets/hackCBS9.0_logo_coloured.png"
-      ],
-      "description": "India's Largest Student Run Hackathon. Join us for 24 hours of building, learning, and hacking.",
-      "organizer": {
-        "@type": "Organization",
-        "name": "Kronos - The Tech Society of SSCBS",
-        "url": "https://hackcbs.tech/"
-      }
+      ]
     }
     </script>
 
