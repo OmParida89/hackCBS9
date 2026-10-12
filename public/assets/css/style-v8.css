@@ -4188,6 +4188,7 @@ lord-icon {
 }
 
 .img{
+    box-sizing: border-box;
     border-radius: 6px;
     width: 100%;
     padding: 20px 140px;
@@ -4201,8 +4202,9 @@ lord-icon {
 }
 
 .img img{
+    width: min(100%, 420px);
     height: 140px;
-    aspect-ratio: 2/1;
+    object-fit: contain;
     transition: all 200ms ease-out;
     border-radius: 6px;   
 }
@@ -4250,19 +4252,16 @@ lord-icon {
 
 /* partner section  */
 .partner-section{
-    /* try  */
-    /* padding: 0px 20px; */
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     width: 100%;
-    flex-direction: row !important;
     gap: var(--gap);
     --gap:30px;
 
 }
 .partner-section .left,.partner-section .right{
     gap: var(--gap);
-    width: calc(50% - var(--gap) / 2);
+    width: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -4272,6 +4271,9 @@ lord-icon {
 
 .partner-section img{
     height: 120px;
+}
+.partner-section .img{
+    padding: 20px 40px;
 }
 
 
@@ -4284,7 +4286,9 @@ lord-icon {
 }
 .general-section .img{
     padding: 20px 0px;
-    flex-basis:calc(25% - 0.75 * var(--gap));
+    flex: 1 1 calc(25% - 0.75 * var(--gap));
+    min-height: 120px;
+    box-sizing: border-box;
 }
 .general-section .img-grid{
     display: flex;
@@ -4347,22 +4351,19 @@ lord-icon {
     .partner-section{
         width: 100%;
         padding: 0px;
-        flex-direction: column !important;
+        grid-template-columns: 1fr;
         gap: 80px;
     }
     .partner-section .left,.partner-section .right{
-        width: 100%;   
+        width: 100%;
         max-width: 700px;
     }
     .partner-section .left .img,.partner-section .right .img{
-        width:calc(100vw - 60px);
-        /* experiment */
-        padding: clamp(20px, calc(10px + 4vw), 40px) 0px;
-        
+        width: 100%;
+        padding: 20px 40px;
     }
     .partner-section .left .img img,.partner-section .right .img img{
-        /* experiment */
-        height: clamp(70px, calc(60px + 5vw), 150px);
+        height: 120px;
     }
 
 
@@ -4370,7 +4371,7 @@ lord-icon {
 
     /* community section  */
     .general-section .img{
-        flex:calc((100% / 2) - (2/3 * var(--gap)))
+        flex: 1 1 calc(50% - (var(--gap) / 2));
     }
 
     .community-section .img{
@@ -4379,9 +4380,9 @@ lord-icon {
 
 
     .general-section .img img{
-        width: 80%;
-        height: auto;
-        aspect-ratio: 2/1;
+        width: min(80%, 220px);
+        height: 80px;
+        object-fit: contain;
     }
 
     .community-section .img img{
@@ -4390,4 +4391,3 @@ lord-icon {
         aspect-ratio: 2/1;
     }
 }
-
