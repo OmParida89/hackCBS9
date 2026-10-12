@@ -4283,10 +4283,10 @@ lord-icon {
 }
 
 .partner-section img{
-    height: 120px;
+    height: 135px;
 }
 .partner-section .img{
-    padding: 20px 40px;
+    padding: 24px 50px;
 }
 
 
@@ -4378,10 +4378,10 @@ lord-icon {
     }
     .partner-section .left .img,.partner-section .right .img{
         width: 100%;
-        padding: 20px 40px;
+        padding: 24px 50px;
     }
     .partner-section .left .img img,.partner-section .right .img img{
-        height: 120px;
+        height: 130px;
     }
 
 
