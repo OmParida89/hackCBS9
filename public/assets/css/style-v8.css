@@ -4248,6 +4248,19 @@ lord-icon {
     gap: var(--gap);
 }
 
+.title-section .img{
+    padding: 28px 140px;
+}
+.title-section .img img{
+    height: 180px;
+}
+.web3-section .img{
+    padding: 20px 60px;
+}
+.web3-section .img img{
+    height: 100px;
+}
+
 
 
 /* partner section  */
@@ -4334,15 +4347,20 @@ lord-icon {
         width: 100%;   
         max-width: 700px;
     }
-    .title-section .img img, .web3-section .img img{
-        /* experiment */
-        height: clamp(70px, calc(60px + 5vw), 150px);
- 
+    .title-section .img img{
+        height: clamp(130px, calc(100px + 5vw), 180px);
     }
-    .title-section .img, .web3-section .img{
+    .web3-section .img img{
+        height: clamp(80px, calc(60px + 4vw), 110px);
+    }
+
+    .title-section .img{
         width:calc(100vw - 60px);
-        /* experiment */
         padding: clamp(20px, calc(10px + 4vw), 40px) 0px;
+    }
+    .web3-section .img{
+        width:calc(100vw - 60px);
+        padding: 20px 40px;
     }
 
 
