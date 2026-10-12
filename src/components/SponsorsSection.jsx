@@ -13,6 +13,14 @@ const initialFormData = {
 
 const sponsorFormEndpoint = import.meta.env.VITE_SPONSOR_FORM_ENDPOINT;
 
+function SponsorLogo({ sponsor }) {
+  if (sponsor.img) {
+    return <img src={sponsor.img} alt={sponsor.name} loading="lazy" decoding="async" />;
+  }
+
+  return <span className="sponsor-logo-text">{sponsor.logoText || sponsor.name}</span>;
+}
+
 export default function SponsorsSection() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [formData, setFormData] = useState(initialFormData);
@@ -134,7 +142,7 @@ export default function SponsorsSection() {
                 data-aos="fade-up"
                 data-aos-duration="1000"
               >
-                <img src={sponsor.img} alt={sponsor.name} loading="lazy" decoding="async" />
+                <SponsorLogo sponsor={sponsor} />
               </a>
             </div>
           ))}
@@ -152,7 +160,7 @@ export default function SponsorsSection() {
                 data-aos="fade-up"
                 data-aos-duration="1000"
               >
-                <img src={sponsor.img} alt={sponsor.name} loading="lazy" decoding="async" />
+                <SponsorLogo sponsor={sponsor} />
               </a>
             </div>
           ))}
@@ -171,14 +179,16 @@ export default function SponsorsSection() {
                   data-aos="fade-up"
                   data-aos-duration="1000"
                 >
-                  <img src={partner.img} alt={partner.name} loading="lazy" decoding="async" />
+                  <SponsorLogo sponsor={partner} />
                 </a>
               </div>
             ))}
           </div>
 
           <div className="section general-section">
-            <div className="heading" data-aos="fade-up" data-aos-duration="1000" />
+            <div className="heading" data-aos="fade-up" data-aos-duration="1000">
+              GENERAL SPONSORS
+            </div>
             <div className="img-grid">
               {sponsorsData.generalSponsors.map((sponsor, idx) => (
                 <a
@@ -190,7 +200,7 @@ export default function SponsorsSection() {
                   data-aos="fade-up"
                   data-aos-duration="1000"
                 >
-                  <img src={sponsor.img} alt={sponsor.name} loading="lazy" decoding="async" />
+                  <SponsorLogo sponsor={sponsor} />
                 </a>
               ))}
             </div>
@@ -209,7 +219,7 @@ export default function SponsorsSection() {
                   data-aos="fade-up"
                   data-aos-duration="1000"
                 >
-                  <img src={partner.img} alt={partner.name} loading="lazy" decoding="async" />
+                  <SponsorLogo sponsor={partner} />
                 </a>
               ))}
             </div>

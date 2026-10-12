@@ -20,18 +20,30 @@ export const sponsorsData = {
     // }
   ],
   categoryPartners: [
-    // {
-    //   title: "PRIVACY PARTNER",
-    //   name: "Brave",
-    //   url: "https://brave.com/en-in/",
-    //   img: "/assets/img/sponsors/brave.jpg"
-    // },
-    // {
-    //   title: "HIRING PARTNER",
-    //   name: "Intozi",
-    //   url: "https://intozi.io/",
-    //   img: "/assets/img/sponsors/intozi.jpg"
-    // }
+    {
+      title: "PLATFORM PARTNER",
+      name: "HackCulture",
+      url: "https://hackculture.io/",
+      img: "/assets/img/sponsors/HackCulture.png"
+    },
+    {
+      title: "CAREER PARTNER",
+      name: "Root2Rise",
+      url: "https://root2rise.com/",
+      img: "/assets/img/sponsors/root2rise.png"
+    },
+    {
+      title: "MEDIA PARTNER",
+      name: "Eventopia",
+      url: "https://eventopia.com/",
+      img: "/assets/img/sponsors/eventopia.png"
+    },
+    {
+      title: "TECHNOLOGY PARTNER",
+      name: "Logitech",
+      url: "https://www.logitech.com/",
+      img: "/assets/img/sponsors/logitech.png"
+    }
   ],
   eventPartners: [
     {
@@ -48,7 +60,8 @@ export const sponsorsData = {
     // }
   ],
   generalSponsors: [
-    // { name: "Code Crafters", url: "https://codecrafters.io/", img: "/assets/img/sponsors/codecrafters.jpg" },
+    { name: "n8n", url: "https://n8n.io/", img: "/assets/img/sponsors/n8n.png" },
+    { name: "Codecrafters", url: "https://codecrafters.io/", img: "/assets/img/sponsors/codecrafters.jpg" },
     // { name: ".XYZ", url: "https://gen.xyz", img: "/assets/img/sponsors/xyz.jpg" },
     // { name: "Auth0", url: "https://auth0.com/", img: "/assets/img/sponsors/auth0.jpg" },
     // { name: "MongoDB", url: "https://www.mongodb.com/", img: "/assets/img/sponsors/mongoDB.jpg" },
