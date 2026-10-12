@@ -4249,10 +4249,11 @@ lord-icon {
 }
 
 .title-section .img{
-    padding: 28px 140px;
+    width: min(100%, 560px);
+    padding: 24px 100px;
 }
 .title-section .img img{
-    height: 180px;
+    height: 160px;
 }
 .web3-section .img{
     padding: 20px 60px;
@@ -4266,7 +4267,7 @@ lord-icon {
 /* partner section  */
 .partner-section{
     display: grid;
-    grid-template-columns: minmax(0, 560px);
+    grid-template-columns: minmax(0, 440px);
     justify-content: center;
     width: 100%;
     gap: var(--gap);
@@ -4309,6 +4310,9 @@ lord-icon {
     gap: var(--gap);
     flex-wrap: wrap;
 }
+.general-section .img img:hover{
+    transform: scale(1);
+}
 
 
 
@@ -4349,7 +4353,7 @@ lord-icon {
         max-width: 700px;
     }
     .title-section .img img{
-        height: clamp(130px, calc(100px + 5vw), 180px);
+        height: clamp(120px, calc(95px + 4vw), 160px);
     }
     .web3-section .img img{
         height: clamp(80px, calc(60px + 4vw), 110px);
