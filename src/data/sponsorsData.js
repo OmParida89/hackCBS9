@@ -35,7 +35,7 @@ export const sponsorsData = {
     {
       title: "MEDIA PARTNER",
       name: "Eventopia",
-      url: "https://eventopia.com/",
+      url: "https://eventopia.in/",
       img: "/assets/img/sponsors/eventopia.png"
     },
     {
@@ -62,6 +62,7 @@ export const sponsorsData = {
   generalSponsors: [
     { name: "n8n", url: "https://n8n.io/", img: "/assets/img/sponsors/n8n.png" },
     { name: "Codecrafters", url: "https://codecrafters.io/", img: "/assets/img/sponsors/codecrafters.jpg" },
+    { name: "Tin Computer", url: "https://tin.computer/", img: "/assets/img/sponsors/TinComputers.png" },
     // { name: ".XYZ", url: "https://gen.xyz", img: "/assets/img/sponsors/xyz.jpg" },
     // { name: "Auth0", url: "https://auth0.com/", img: "/assets/img/sponsors/auth0.jpg" },
     // { name: "MongoDB", url: "https://www.mongodb.com/", img: "/assets/img/sponsors/mongoDB.jpg" },
