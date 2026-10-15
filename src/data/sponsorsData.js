@@ -21,6 +21,12 @@ export const sponsorsData = {
   ],
   categoryPartners: [
     {
+      title: "TECHNOLOGY PARTNER",
+      name: "Logitech",
+      url: "https://www.logitech.com/",
+      img: "/assets/img/sponsors/logitech.png"
+    },
+    {
       title: "PLATFORM PARTNER",
       name: "HackCulture",
       url: "https://hackculture.io/",
@@ -37,12 +43,6 @@ export const sponsorsData = {
       name: "Eventopia",
       url: "https://eventopia.in/",
       img: "/assets/img/sponsors/eventopia.png"
-    },
-    {
-      title: "TECHNOLOGY PARTNER",
-      name: "Logitech",
-      url: "https://www.logitech.com/",
-      img: "/assets/img/sponsors/logitech.png"
     }
   ],
   eventPartners: [
