@@ -290,7 +290,6 @@ export default function FooterSection() {
                         <li><a href="https://www.linkedin.com/company/hackcbs" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin-in"></i></a></li>
                         <li><a href="https://x.com/hackCBS" target="_blank" rel="noopener noreferrer"><i className="fab fa-x-twitter"></i></a></li>
                         <li><a href="http://bit.ly/hackCBS-YouTube" target="_blank" rel="noopener noreferrer"><i className="fab fa-youtube"></i></a></li>
-                        <li><a href="https://www.facebook.com/hackcbs/" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-f"></i></a></li>
                       </ul>
                     </div>
                   </div>
@@ -302,7 +301,7 @@ export default function FooterSection() {
                   <hr />
                   <div className="col-sm-12">
                     <h5 style={{ color: 'white', textAlign: 'center' }}>
-                      <a href="https://www.linkedin.com/in/nitish-rathore-a49477259/" target="_blank" rel="noopener noreferrer" style={{ color: 'white', textDecoration: 'none' }}>
+                      <a href="https://www.linkedin.com/company/hackcbs/posts/?feedView=all" target="_blank" rel="noopener noreferrer" style={{ color: 'white', textDecoration: 'none' }}>
                         Designed with ❤️ by Team hackCBS
                       </a>
                     </h5>
