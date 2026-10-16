@@ -35,7 +35,7 @@ export const sponsorsData = {
     {
       title: "CAREER PARTNER",
       name: "Root2Rise",
-      url: "https://root2rise.com/",
+      url: "https://root2rise.co.in/",
       img: "/assets/img/sponsors/root2rise.png"
     },
     {
