@@ -21,16 +21,16 @@ export const sponsorsData = {
   ],
   categoryPartners: [
     {
+      title: "ASSOCIATE SPONSOR",
+      name: "IOMETE",
+      url: "https://iomete.com/",
+      img: "/assets/img/sponsors/IOMETE.png"
+    },
+    {
       title: "TECHNOLOGY PARTNER",
       name: "Logitech",
       url: "https://www.logitech.com/",
       img: "/assets/img/sponsors/logitech.png"
-    },
-    {
-      title: "PLATFORM PARTNER",
-      name: "HackCulture",
-      url: "https://hackculture.io/",
-      img: "/assets/img/sponsors/HackCulture.png"
     },
     {
       title: "CAREER PARTNER",
@@ -39,10 +39,30 @@ export const sponsorsData = {
       img: "/assets/img/sponsors/root2rise.png"
     },
     {
+      title: "CAREER PARTNER",
+      name: "BuildWise",
+      url: "https://buildwise.co/",
+      img: "/assets/img/sponsors/BuildWise.png"
+    },
+    {
+      title: "PLATFORM PARTNER",
+      name: "HackCulture",
+      url: "https://hackculture.io/",
+      img: "/assets/img/sponsors/HackCulture.png"
+    },
+    {
       title: "MEDIA PARTNER",
       name: "Eventopia",
       url: "https://eventopia.in/",
       img: "/assets/img/sponsors/eventopia.png"
+    }
+  ],
+  publishingPartners: [
+    {
+      title: "PUBLISHING PARTNER",
+      name: "Minisodas Labs",
+      url: "https://minisodas.com/",
+      img: "/assets/img/sponsors/minisodas_labs.png"
     }
   ],
   eventPartners: [

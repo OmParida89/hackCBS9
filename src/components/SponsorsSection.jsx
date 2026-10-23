@@ -148,6 +148,26 @@ export default function SponsorsSection() {
           ))}
 
           {sponsorsData.categoryPartners
+            .filter((sponsor) => sponsor.name === 'IOMETE')
+            .map((sponsor) => (
+              <div className="section web3-section" key={sponsor.name}>
+                <div className="heading" data-aos="fade-up" data-aos-duration="1000">
+                  {sponsor.title}
+                </div>
+                <a
+                  href={sponsor.url}
+                  className="img"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                >
+                  <SponsorLogo sponsor={sponsor} />
+                </a>
+              </div>
+            ))}
+
+          {sponsorsData.categoryPartners
             .filter((sponsor) => sponsor.name === 'Logitech')
             .map((sponsor) => (
               <div className="section web3-section" key={sponsor.name}>
@@ -187,8 +207,31 @@ export default function SponsorsSection() {
             ))}
           </div>
 
+          <div className="section career-partners-section">
+            <div className="heading" data-aos="fade-up" data-aos-duration="1000">
+              CAREER PARTNERS
+            </div>
+            <div className="career-partners-grid">
+              {sponsorsData.categoryPartners
+                .filter((sponsor) => ['Root2Rise', 'BuildWise'].includes(sponsor.name))
+                .map((sponsor) => (
+                  <a
+                    href={sponsor.url}
+                    className="img"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    key={sponsor.name}
+                    data-aos="fade-up"
+                    data-aos-duration="1000"
+                  >
+                    <SponsorLogo sponsor={sponsor} />
+                  </a>
+                ))}
+            </div>
+          </div>
+
           {sponsorsData.categoryPartners
-            .filter((sponsor) => sponsor.name !== 'Logitech')
+            .filter((sponsor) => ['HackCulture', 'Eventopia'].includes(sponsor.name))
             .map((sponsor) => (
               <div className="section web3-section" key={sponsor.name}>
                 <div className="heading" data-aos="fade-up" data-aos-duration="1000">
@@ -206,6 +249,24 @@ export default function SponsorsSection() {
                 </a>
               </div>
             ))}
+
+          {sponsorsData.publishingPartners.map((partner) => (
+            <div className="section web3-section publishing-section" key={partner.name}>
+              <div className="heading" data-aos="fade-up" data-aos-duration="1000">
+                {partner.title}
+              </div>
+              <a
+                href={partner.url}
+                className="img"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+              >
+                <SponsorLogo sponsor={partner} />
+              </a>
+            </div>
+          ))}
 
           <div className="section general-section">
             <div className="heading" data-aos="fade-up" data-aos-duration="1000">

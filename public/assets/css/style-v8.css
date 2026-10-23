@@ -4261,6 +4261,30 @@ lord-icon {
 .web3-section .img img{
     height: 100px;
 }
+.career-partners-section{
+    gap: var(--gap);
+}
+.career-partners-grid{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+    gap: var(--gap);
+}
+.career-partners-grid .img{
+    padding: 20px 60px;
+}
+.career-partners-grid .img img{
+    height: 100px;
+}
+.publishing-section .img{
+    width: min(100%, 540px);
+    max-width: 540px;
+    padding: 20px 60px;
+}
+.publishing-section .img img{
+    width: min(100%, 420px);
+    height: 100px;
+}
 
 
 
@@ -4366,6 +4390,21 @@ lord-icon {
     .web3-section .img{
         width:calc(100vw - 60px);
         padding: 20px 40px;
+    }
+    .career-partners-grid{
+        grid-template-columns: 1fr;
+    }
+    .career-partners-grid .img img{
+        height: 100px;
+    }
+    .publishing-section .img{
+        width: calc(100vw - 60px);
+        max-width: calc(100vw - 60px);
+        padding: 20px 40px;
+    }
+    .publishing-section .img img{
+        width: min(100%, 420px);
+        height: 100px;
     }
 
 

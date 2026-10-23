@@ -3,27 +3,51 @@ import React, { useEffect, useState } from 'react';
 // Order matters: phone / email / phone, so email lands in the middle column.
 const CONTACT_ITEMS = [
   {
-    icon: 'fas fa-phone-volume',
+    icon: 'phone',
     name: 'Om Parida',
     value: '+91 86585 74552',
     href: 'tel:+918658574552',
     color: '#3C9DFF'
   },
   {
-    icon: 'fas fa-envelope-open-text',
+    icon: 'email',
     name: 'Email Us',
     value: 'hackcbssupport@gmail.com',
     href: 'mailto:hackcbssupport@gmail.com',
     color: '#FF2800'
   },
   {
-    icon: 'fas fa-phone-volume',
+    icon: 'phone',
     name: 'Shreyas Yadav',
     value: '+91 78001 36502',
     href: 'tel:+917800136502',
     color: '#FF9C4A'
   }
 ];
+
+function ContactIcon({ type }) {
+  if (type === 'email') {
+    return (
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M3 5h18v14H3z" fill="none" stroke="currentColor" strokeWidth="2" />
+        <path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" strokeWidth="2" />
+      </svg>
+    );
+  }
+
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path
+        d="M7.7 3.5 10 6.8 8.3 9a13.7 13.7 0 0 0 6.7 6.7l2.2-1.7 3.3 2.3-1.5 3.1c-.5 1-1.5 1.5-2.6 1.3C9.4 19.3 4.7 14.6 3.3 7.6 3 6.5 3.6 5.5 4.6 5z"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
 
 export default function FooterSection() {
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -108,6 +132,12 @@ export default function FooterSection() {
               inset 5px 5px 10px rgba(0, 0, 0, 0.55),
               inset -5px -5px 10px rgba(255, 255, 255, 0.035);
             transition: box-shadow 0.2s ease, transform 0.2s ease;
+          }
+
+          .f1c-icon svg {
+            width: 28px;
+            height: 28px;
+            display: block;
           }
 
           .f1c-item:hover .f1c-icon {
@@ -201,7 +231,7 @@ export default function FooterSection() {
                   {idx > 0 && <div className="f1c-divider" aria-hidden="true" />}
                   <a className="f1c-item" href={item.href} style={{ '--ci-color': item.color }}>
                     <div className="f1c-icon">
-                      <i className={item.icon}></i>
+                      <ContactIcon type={item.icon} />
                     </div>
                     <p className="f1c-name">{item.name}</p>
                     <span className="f1c-value">{item.value}</span>
