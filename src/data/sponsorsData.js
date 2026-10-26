@@ -45,6 +45,12 @@ export const sponsorsData = {
       img: "/assets/img/sponsors/BuildWise.png"
     },
     {
+      title: "CAREER PARTNER",
+      name: "Fueler",
+      url: "https://fueler.io/",
+      img: "/assets/img/sponsors/Fueler.png"
+    },
+    {
       title: "HIRING PARTNER",
       name: "GolfAI",
       url: "https://www.golfai.in/",
@@ -71,6 +77,52 @@ export const sponsorsData = {
       img: "/assets/img/sponsors/minisodas_labs.png"
     }
   ],
+  twoColumnPartners: [
+    {
+      title: "PRODUCTION AI PARTNER",
+      name: "Prune",
+      url: "https://www.withprune.com/",
+      img: "/assets/img/sponsors/prune.png"
+    },
+    {
+      title: "ECOSYSTEM PARTNER",
+      name: "Solari",
+      url: "https://www.getsolari.com/",
+      img: "/assets/img/sponsors/Solari.png",
+      className: "solari-section"
+    },
+    {
+      title: "DOMAIN PARTNER",
+      name: ".xyz",
+      url: "https://gen.xyz/",
+      img: "/assets/img/sponsors/xyz.jpg"
+    },
+    {
+      title: "EDITOR PARTNER",
+      name: "Sublime Text",
+      url: "https://www.sublimetext.com/",
+      img: "/assets/img/sponsors/sublime_text.png",
+      className: "sublime-section"
+    },
+    {
+      title: "AUTOMATION PARTNER",
+      name: "n8n",
+      url: "https://n8n.io/",
+      img: "/assets/img/sponsors/n8n.png"
+    },
+    {
+      title: "LEARNING PARTNER",
+      name: "Codecrafters",
+      url: "https://codecrafters.io/",
+      img: "/assets/img/sponsors/codecrafters.jpg"
+    },
+    {
+      title: "GROWTH TOOLS PARTNER",
+      name: "Tin Computers",
+      url: "https://tin.computer/",
+      img: "/assets/img/sponsors/TinComputers.png"
+    }
+  ],
   eventPartners: [
     {
       title: "EVENT PARTNER",
@@ -86,9 +138,6 @@ export const sponsorsData = {
     // }
   ],
   generalSponsors: [
-    { name: "n8n", url: "https://n8n.io/", img: "/assets/img/sponsors/n8n.png" },
-    { name: "Codecrafters", url: "https://codecrafters.io/", img: "/assets/img/sponsors/codecrafters.jpg" },
-    { name: "Tin Computer", url: "https://tin.computer/", img: "/assets/img/sponsors/TinComputers.png" },
     // { name: ".XYZ", url: "https://gen.xyz", img: "/assets/img/sponsors/xyz.jpg" },
     // { name: "Auth0", url: "https://auth0.com/", img: "/assets/img/sponsors/auth0.jpg" },
     // { name: "MongoDB", url: "https://www.mongodb.com/", img: "/assets/img/sponsors/mongoDB.jpg" },

@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react';
 import { sponsorsData } from '../data/sponsorsData';
 
+/*
 const initialFormData = {
   name: '',
   company: '',
@@ -12,6 +12,7 @@ const initialFormData = {
 };
 
 const sponsorFormEndpoint = import.meta.env.VITE_SPONSOR_FORM_ENDPOINT;
+*/
 
 function SponsorLogo({ sponsor }) {
   if (sponsor.img) {
@@ -22,6 +23,7 @@ function SponsorLogo({ sponsor }) {
 }
 
 export default function SponsorsSection() {
+  /*
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [formData, setFormData] = useState(initialFormData);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -37,7 +39,6 @@ export default function SponsorsSection() {
         setIsModalOpen(false);
       }
     };
-
     document.addEventListener('keydown', handleEscape);
     document.body.style.overflow = 'hidden';
 
@@ -111,6 +112,7 @@ export default function SponsorsSection() {
       setIsSubmitting(false);
     }
   };
+  */
 
   return (
     <>
@@ -118,12 +120,12 @@ export default function SponsorsSection() {
         <div className="container">
           <div className="section_title">
             <h2
-              className="title-dark"
+              className="title-dark sponsors-main-title"
               data-aos="fade-right"
               data-aos-duration="1000"
               data-aos-anchor-placement="top-bottom"
             >
-              Current Sponsors
+              Our Sponsors
             </h2>
           </div>
         </div>
@@ -213,7 +215,7 @@ export default function SponsorsSection() {
             </div>
             <div className="career-partners-grid">
               {sponsorsData.categoryPartners
-                .filter((sponsor) => ['Root2Rise', 'BuildWise'].includes(sponsor.name))
+                .filter((sponsor) => ['Root2Rise', 'BuildWise', 'Fueler'].includes(sponsor.name))
                 .map((sponsor) => (
                   <a
                     href={sponsor.url}
@@ -250,7 +252,7 @@ export default function SponsorsSection() {
           </div>
 
           {sponsorsData.categoryPartners
-            .filter((sponsor) => ['HackCulture', 'Eventopia'].includes(sponsor.name))
+            .filter((sponsor) => sponsor.name === 'HackCulture')
             .map((sponsor) => (
               <div className="section web3-section" key={sponsor.name}>
                 <div className="heading" data-aos="fade-up" data-aos-duration="1000">
@@ -287,47 +289,89 @@ export default function SponsorsSection() {
             </div>
           ))}
 
-          <div className="section general-section">
-            <div className="heading" data-aos="fade-up" data-aos-duration="1000">
-              GENERAL SPONSORS
-            </div>
-            <div className="img-grid">
-              {sponsorsData.generalSponsors.map((sponsor, idx) => (
+          <div className="additional-partners-grid">
+            {sponsorsData.twoColumnPartners.map((partner) => (
+                <div className={`section web3-section additional-partner-section ${partner.className || ''}`} key={partner.name}>
+                  <div className="heading" data-aos="fade-up" data-aos-duration="1000">
+                    {partner.title}
+                  </div>
+                  <a
+                    href={partner.url}
+                    className="img"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-aos="fade-up"
+                    data-aos-duration="1000"
+                  >
+                    <SponsorLogo sponsor={partner} />
+                  </a>
+                </div>
+              ))}
+          </div>
+
+          {sponsorsData.categoryPartners
+            .filter((sponsor) => sponsor.name === 'Eventopia')
+            .map((sponsor) => (
+              <div className="section web3-section media-partner-section" key={sponsor.name}>
+                <div className="heading" data-aos="fade-up" data-aos-duration="1000">
+                  {sponsor.title}
+                </div>
                 <a
                   href={sponsor.url}
                   className="img"
                   target="_blank"
                   rel="noopener noreferrer"
-                  key={idx}
                   data-aos="fade-up"
                   data-aos-duration="1000"
                 >
                   <SponsorLogo sponsor={sponsor} />
                 </a>
-              ))}
-            </div>
-          </div>
+              </div>
+            ))}
 
-          <div className="section community-section">
-            <div className="heading" data-aos="fade-up" data-aos-duration="1000" />
-            <div className="img-grid">
-              {sponsorsData.communityPartners.map((partner, idx) => (
-                <a
-                  href={partner.url}
-                  className="img"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  key={idx}
-                  data-aos="fade-up"
-                  data-aos-duration="1000"
-                >
-                  <SponsorLogo sponsor={partner} />
-                </a>
-              ))}
+          {sponsorsData.generalSponsors.length > 0 && (
+            <div className="section general-section">
+              <div className="img-grid">
+                {sponsorsData.generalSponsors.map((sponsor, idx) => (
+                  <a
+                    href={sponsor.url}
+                    className="img"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    key={idx}
+                    data-aos="fade-up"
+                    data-aos-duration="1000"
+                  >
+                    <SponsorLogo sponsor={sponsor} />
+                  </a>
+                ))}
+              </div>
             </div>
-          </div>
+          )}
+
+          {sponsorsData.communityPartners.length > 0 && (
+            <div className="section community-section">
+              <div className="heading" data-aos="fade-up" data-aos-duration="1000" />
+              <div className="img-grid">
+                {sponsorsData.communityPartners.map((partner, idx) => (
+                  <a
+                    href={partner.url}
+                    className="img"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    key={idx}
+                    data-aos="fade-up"
+                    data-aos-duration="1000"
+                  >
+                    <SponsorLogo sponsor={partner} />
+                  </a>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
 
+        {/*
         <br />
 
         <center>
@@ -341,8 +385,10 @@ export default function SponsorsSection() {
             </div>
           </div>
         </center>
+        */}
       </section>
 
+      {/*
       {isModalOpen && (
         <div
           className="sponsor-modal-backdrop"
@@ -490,6 +536,7 @@ export default function SponsorsSection() {
           </div>
         </div>
       )}
+      */}
     </>
   );
 }
