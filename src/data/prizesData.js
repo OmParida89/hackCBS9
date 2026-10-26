@@ -108,3 +108,60 @@ export const qyrusPrizes = [
     logo: "/assets/img/themes_new/fifth.jpg"
   }
 ];
+
+export const mlhPrizes = [
+  {
+    title: "Best Use of Gemini API",
+    winner: "1 winner",
+    prize: "Kreo Mechanical Keyboards",
+    link: "https://mlh.link/gemini",
+    logo: "/assets/img/mlh_prizes/gemini-logo.png",
+    prizeImage: "/assets/img/mlh_prizes/gemini-prize.png",
+    accent: "#4285F4",
+  },
+  {
+    title: "Best Use of Tiger Data",
+    winner: "1 winner",
+    prize: "Stream Decks",
+    link: "https://www.mlh.com/partners/tigerdata",
+    logo: "/assets/img/mlh_prizes/tiger-data-logo.png",
+    prizeImage: "/assets/img/mlh_prizes/tiger-data-prize.png",
+    accent: "#F59E0B",
+  },
+  {
+    title: "Best Use of DigitalOcean",
+    winner: "1 winner",
+    prize: "Robot Dog Kits",
+    link: "https://www.mlh.com/partners/digitalocean",
+    logo: "/assets/img/mlh_prizes/digitalocean-logo.png",
+    prizeImage: "/assets/img/mlh_prizes/digitalocean-prize.png",
+    accent: "#0080FF",
+  },
+  {
+    title: "Best Use of Vultr",
+    winner: "1 winner",
+    prize: "Arduino Kits",
+    link: "https://www.mlh.com/partners/vultr",
+    logo: "/assets/img/mlh_prizes/vultr-logo.png",
+    prizeImage: "/assets/img/mlh_prizes/vultr-prize.png",
+    accent: "#6D28D9",
+  },
+  {
+    title: "Best Use of MongoDB Atlas",
+    winner: "1 winner",
+    prize: "M5Stack IOT Kit",
+    link: "https://www.mlh.com/partners/mongodb",
+    logo: "/assets/img/mlh_prizes/mongodb-logo.png",
+    prizeImage: "/assets/img/mlh_prizes/mongodb-prize.png",
+    accent: "#00ED64",
+  },
+  {
+    title: "Best Use of Solana",
+    winner: "1 winner",
+    prize: "Unruggable Hardware Wallets",
+    link: "https://www.mlh.com/partners/solana",
+    logo: "/assets/img/mlh_prizes/solana-logo.png",
+    prizeImage: "/assets/img/mlh_prizes/solana-prize.png",
+    accent: "#14F195",
+  }
+];

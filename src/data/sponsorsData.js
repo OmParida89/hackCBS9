@@ -117,7 +117,7 @@ export const sponsorsData = {
       img: "/assets/img/sponsors/codecrafters.jpg"
     },
     {
-      title: "GROWTH TOOLS PARTNER",
+      title: "AI GROWTH PARTNER",
       name: "Tin Computers",
       url: "https://tin.computer/",
       img: "/assets/img/sponsors/TinComputers.png"

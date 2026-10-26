@@ -3,7 +3,8 @@ import {
   overallPrizes,
   specialHacks,
   base44Prizes,
-  qyrusPrizes
+  qyrusPrizes,
+  mlhPrizes
 } from '../data/prizesData';
 
 // revealDelay/revealEasing stagger the entrance so 2nd & 3rd rise first and
@@ -204,6 +205,41 @@ function CategoryGrid({ items, getFields }) {
           </div>
         );
       })}
+    </div>
+  );
+}
+
+function MlhPrizeGrid({ items }) {
+  const [ref, inView] = useInView(0.15);
+
+  return (
+    <div className="mlh-prize-grid" ref={ref}>
+      {items.map((item, idx) => (
+        <article
+          className={`mlh-prize-card${inView ? ' mlh-prize-card-visible' : ''}`}
+          key={item.title}
+          style={{
+            '--mlh-accent': item.accent,
+            '--mlh-delay': `${idx * 80}ms`,
+            '--mlh-prize-image': `url("${item.prizeImage}")`
+          }}
+        >
+          <div className="mlh-prize-card-top">
+            <span className="mlh-prize-winner">{item.winner}</span>
+          </div>
+          <div className="mlh-prize-card-body">
+            <div className="mlh-prize-logo-frame">
+              <img className="mlh-prize-logo" loading="lazy" decoding="async" src={item.logo} alt="" />
+            </div>
+            <h4>{item.title}</h4>
+            <p className="mlh-prize-label">PRIZE</p>
+            <p className="mlh-prize-name">{item.prize}</p>
+            <a href={item.link} target="_blank" rel="noreferrer">
+              Read more <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </article>
+      ))}
     </div>
   );
 }
@@ -552,7 +588,177 @@ export default function PrizesSection() {
           margin: auto 0 0;
         }
 
+        .mlh-prize-grid {
+          display: grid;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: 24px;
+          max-width: 1080px;
+          margin: 0 auto;
+          padding: 28px 0 10px;
+        }
+
+        .mlh-prize-card {
+          --mlh-accent: #4285f4;
+          position: relative;
+          min-height: 310px;
+          overflow: hidden;
+          border: 1px solid color-mix(in srgb, var(--mlh-accent) 48%, #29303b);
+          border-radius: 18px;
+          background:
+            linear-gradient(145deg, rgba(8, 10, 14, 0.02) 10%, rgba(8, 10, 14, 0.9) 72%),
+            linear-gradient(35deg, #080a0e 12%, rgba(8, 10, 14, 0.2) 58%, rgba(8, 10, 14, 0.42) 100%),
+            var(--mlh-prize-image) center top / 100% auto no-repeat,
+            linear-gradient(155deg, #15191f 0%, #080a0e 72%);
+          box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
+          opacity: 0;
+          transform: translateY(18px);
+          transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease, opacity 0.5s ease;
+          transition-delay: var(--mlh-delay);
+        }
+
+        .mlh-prize-card-visible {
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+        .mlh-prize-card::before {
+          position: absolute;
+          top: 0;
+          right: 0;
+          left: 0;
+          height: 4px;
+          background: var(--mlh-accent);
+          box-shadow: 0 0 18px var(--mlh-accent);
+          content: '';
+        }
+
+        .mlh-prize-card::after {
+          position: absolute;
+          right: -42px;
+          bottom: -52px;
+          width: 150px;
+          height: 150px;
+          border: 1px solid color-mix(in srgb, var(--mlh-accent) 35%, transparent);
+          border-radius: 50%;
+          box-shadow: 0 0 0 16px color-mix(in srgb, var(--mlh-accent) 7%, transparent);
+          content: '';
+          pointer-events: none;
+        }
+
+        .mlh-prize-card:hover,
+        .mlh-prize-card:focus-within {
+          z-index: 1;
+          border-color: var(--mlh-accent);
+          box-shadow:
+            0 0 0 1px color-mix(in srgb, var(--mlh-accent) 75%, transparent),
+            0 0 32px 5px color-mix(in srgb, var(--mlh-accent) 42%, transparent),
+            0 18px 34px rgba(0, 0, 0, 0.42);
+          transform: translateY(-8px) scale(1.035);
+        }
+
+        .mlh-prize-card-top {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 24px 24px 0;
+        }
+
+        .mlh-prize-winner {
+          color: rgba(255, 255, 255, 0.56);
+          font-size: 11px;
+          font-weight: 700;
+          letter-spacing: 1.2px;
+          text-transform: uppercase;
+        }
+
+        .mlh-prize-card-body {
+          position: relative;
+          z-index: 1;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          min-height: 225px;
+          padding: 110px 24px 24px;
+        }
+
+        .mlh-prize-logo-frame {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 150px;
+          height: 48px;
+          box-sizing: border-box;
+          margin: 0 0 14px;
+          padding: 8px 14px;
+          border: 1px solid rgba(255, 255, 255, 0.85);
+          border-radius: 10px;
+          background: #fff;
+          box-shadow: 0 5px 16px rgba(0, 0, 0, 0.28);
+        }
+
+        .mlh-prize-logo {
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+          object-position: center;
+          margin: 0;
+        }
+
+        .mlh-prize-label {
+          margin: 0 0 8px;
+          color: rgba(255, 255, 255, 0.45);
+          font-size: 10px;
+          font-weight: 800;
+          letter-spacing: 1.8px;
+        }
+
+        .mlh-prize-card h4 {
+          min-height: 54px;
+          margin: 0 0 18px;
+          color: #fff;
+          font-family: 'F1Font', 'Work Sans', sans-serif;
+          font-size: 22px;
+          font-weight: normal;
+          letter-spacing: 0.3px;
+          line-height: 1.25;
+        }
+
+        .mlh-prize-label {
+          margin-bottom: 5px;
+          color: rgba(255, 255, 255, 0.45);
+        }
+
+        .mlh-prize-name {
+          min-height: 42px;
+          margin: 0 0 20px;
+          color: rgba(255, 255, 255, 0.9);
+          font-size: 16px;
+          font-weight: 700;
+          line-height: 1.3;
+        }
+
+        .mlh-prize-card a {
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          color: #fff;
+          font-size: 12px;
+          font-weight: 800;
+          letter-spacing: 1px;
+          text-decoration: none;
+          text-transform: uppercase;
+          transition: color 0.2s ease, gap 0.2s ease;
+        }
+
+        .mlh-prize-card a:hover,
+        .mlh-prize-card a:focus-visible {
+          gap: 12px;
+          color: var(--mlh-accent);
+        }
+
         @media (max-width: 992px) {
+          .mlh-prize-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
           .podium-grid {
             flex-direction: column;
             flex-wrap: nowrap;
@@ -568,6 +774,12 @@ export default function PrizesSection() {
           .podium-card.podium-first { order: 1; }
           .podium-card.podium-second { order: 2; }
           .podium-card.podium-third { order: 3; }
+        }
+
+        @media (max-width: 600px) {
+          .mlh-prize-grid { grid-template-columns: 1fr; }
+          .mlh-prize-card:hover,
+          .mlh-prize-card:focus-within { transform: translateY(-5px) scale(1.02); }
         }
       `}</style>
 
@@ -597,6 +809,15 @@ export default function PrizesSection() {
           items={specialHacks}
           getFields={(h) => ({ title: h.title, amount: h.prize, desc: h.extra, logo: h.logo })}
         />
+      </div>
+
+      <div className="container mt-5">
+        <div className="section_title">
+          <h3 className="title-dark" data-aos="fade-right" data-aos-duration="1000">
+            MLH PRIZES:
+          </h3>
+        </div>
+        <MlhPrizeGrid items={mlhPrizes} />
       </div>
 
       {/* Base44 Track */}
