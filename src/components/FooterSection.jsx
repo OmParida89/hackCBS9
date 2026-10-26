@@ -204,33 +204,61 @@ export default function FooterSection() {
           }
 
           .lgx-social-footer > li {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            margin: 0;
+            padding: 0 !important;
             opacity: 1;
+            border-radius: 50%;
+            background: #101116 !important;
+            box-sizing: border-box;
+          }
+
+          .lgx-social-footer {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin: 0;
+            padding: 0;
+          }
+
+          .lgx-social-footer > li > a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            color: #87ceeb !important;
+            border-radius: 50%;
+          }
+
+          .lgx-social-footer > li:hover {
+            background: rgba(255, 138, 234, 0.2) !important;
+          }
+
+          .lgx-social-footer > li:nth-child(1) > a {
+            color: #e4405f !important;
+          }
+
+          .lgx-social-footer > li:nth-child(2) > a {
+            color: #0a66c2 !important;
+          }
+
+          .lgx-social-footer > li:nth-child(3) > a {
+            color: #ffffff !important;
+          }
+
+          .lgx-social-footer > li:nth-child(4) > a {
+            color: #ff0000 !important;
           }
 
           .lgx-social-footer svg {
             width: 22px;
             height: 22px;
             display: block;
-          }
-
-          .lgx-social-footer > li:nth-child(1) i {
-            color: #e4405f !important;
-          }
-
-          .lgx-social-footer > li:nth-child(2) i {
-            color: #0a66c2 !important;
-          }
-
-          .lgx-social-footer > li:nth-child(3) i {
-            color: #ffffff !important;
-          }
-
-          .lgx-social-footer > li:nth-child(4) i {
-            color: #ff0000 !important;
-          }
-
-          .lgx-social-footer > li:nth-child(5) i {
-            color: #1877f2 !important;
           }
 
           .lgx-social-footer:hover > li {
