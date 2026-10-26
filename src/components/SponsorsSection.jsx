@@ -228,6 +228,25 @@ export default function SponsorsSection() {
                   </a>
                 ))}
             </div>
+            {sponsorsData.categoryPartners
+              .filter((sponsor) => sponsor.name === 'GolfAI')
+              .map((sponsor) => (
+                <div className="hiring-partner-section" key={sponsor.name}>
+                  <div className="heading" data-aos="fade-up" data-aos-duration="1000">
+                    {sponsor.title}
+                  </div>
+                  <a
+                    href={sponsor.url}
+                    className="img"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-aos="fade-up"
+                    data-aos-duration="1000"
+                  >
+                    <SponsorLogo sponsor={sponsor} />
+                  </a>
+                </div>
+              ))}
           </div>
 
           {sponsorsData.categoryPartners

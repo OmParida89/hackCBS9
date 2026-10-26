@@ -4276,6 +4276,20 @@ lord-icon {
 .career-partners-grid .img img{
     height: 100px;
 }
+.hiring-partner-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--gap);
+    margin-top: var(--gap);
+}
+.hiring-partner-section .img{
+    width: min(100%, 540px);
+    padding: 20px 60px;
+}
+.hiring-partner-section .img img{
+    height: 100px;
+}
 .publishing-section .img{
     width: min(100%, 540px);
     max-width: 540px;
@@ -4396,6 +4410,10 @@ lord-icon {
     }
     .career-partners-grid .img img{
         height: 100px;
+    }
+    .hiring-partner-section .img{
+        width: calc(100vw - 60px);
+        padding: 20px 40px;
     }
     .publishing-section .img{
         width: calc(100vw - 60px);

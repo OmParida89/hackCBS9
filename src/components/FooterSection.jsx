@@ -25,6 +25,21 @@ const CONTACT_ITEMS = [
   }
 ];
 
+function SocialIcon({ type }) {
+  const paths = {
+    instagram: 'M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3.5A4.5 4.5 0 1 1 12 16.5 4.5 4.5 0 0 1 12 7.5Zm0 2A2.5 2.5 0 1 0 12 14.5 2.5 2.5 0 0 0 12 9.5ZM17.5 6a1.5 1.5 0 1 1-1.5 1.5A1.5 1.5 0 0 1 17.5 6Z',
+    linkedin: 'M5 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1 0-5ZM3 10h4v11H3V10Zm6 0h3.8v1.5h.1A4.2 4.2 0 0 1 17 10c4 0 4 3.4 4 7v4h-4v-3.6c0-1.7 0-3.9-2.4-3.9-2.4 0-2.7 1.9-2.7 3.8V21H10V10Z',
+    x: 'M5 3h4.2l3.1 4.5L16.2 3H19l-5.4 6.1L20 21h-4.2l-3.6-5.2L7.5 21H4.7l5.8-6.7L5 3Zm3.2 2 7.8 14h1.1L9.3 5H8.2Z',
+    youtube: 'M21.6 7.2a2.8 2.8 0 0 0-2-2C17.8 4.7 12 4.7 12 4.7s-5.8 0-7.6.5a2.8 2.8 0 0 0-2 2C2 9 2 12 2 12s0 3 .4 4.8a2.8 2.8 0 0 0 2 2c1.8.5 7.6.5 7.6.5s5.8 0 7.6-.5a2.8 2.8 0 0 0 2-2C22 15 22 12 22 12s0-3-.4-4.8ZM10 15.5v-7l6 3.5-6 3.5Z'
+  };
+
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path d={paths[type]} fill="currentColor" />
+    </svg>
+  );
+}
+
 function ContactIcon({ type }) {
   if (type === 'email') {
     return (
@@ -192,6 +207,12 @@ export default function FooterSection() {
             opacity: 1;
           }
 
+          .lgx-social-footer svg {
+            width: 22px;
+            height: 22px;
+            display: block;
+          }
+
           .lgx-social-footer > li:nth-child(1) i {
             color: #e4405f !important;
           }
@@ -316,10 +337,10 @@ export default function FooterSection() {
                       <h3 className="footer-title">Social Connection</h3>
                       <p className="text">Follow us for latest updates:</p>
                       <ul className="list-inline lgx-social-footer">
-                        <li><a href="https://www.instagram.com/hackcbs/" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a></li>
-                        <li><a href="https://www.linkedin.com/company/hackcbs" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin-in"></i></a></li>
-                        <li><a href="https://x.com/hackCBS" target="_blank" rel="noopener noreferrer"><i className="fab fa-x-twitter"></i></a></li>
-                        <li><a href="http://bit.ly/hackCBS-YouTube" target="_blank" rel="noopener noreferrer"><i className="fab fa-youtube"></i></a></li>
+                        <li><a href="https://www.instagram.com/hackcbs/" target="_blank" rel="noopener noreferrer"><SocialIcon type="instagram" /></a></li>
+                        <li><a href="https://www.linkedin.com/company/hackcbs" target="_blank" rel="noopener noreferrer"><SocialIcon type="linkedin" /></a></li>
+                        <li><a href="https://x.com/hackCBS" target="_blank" rel="noopener noreferrer"><SocialIcon type="x" /></a></li>
+                        <li><a href="http://bit.ly/hackCBS-YouTube" target="_blank" rel="noopener noreferrer"><SocialIcon type="youtube" /></a></li>
                       </ul>
                     </div>
                   </div>

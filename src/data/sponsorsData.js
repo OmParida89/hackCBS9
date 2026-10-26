@@ -21,7 +21,7 @@ export const sponsorsData = {
   ],
   categoryPartners: [
     {
-      title: "ASSOCIATE SPONSOR",
+      title: "DATA & AI PARTNER",
       name: "IOMETE",
       url: "https://iomete.com/",
       img: "/assets/img/sponsors/IOMETE.png"
@@ -41,8 +41,14 @@ export const sponsorsData = {
     {
       title: "CAREER PARTNER",
       name: "BuildWise",
-      url: "https://buildwise.co/",
+      url: "https://buildwise.education/",
       img: "/assets/img/sponsors/BuildWise.png"
+    },
+    {
+      title: "HIRING PARTNER",
+      name: "GolfAI",
+      url: "https://www.golfai.in/",
+      img: "/assets/img/sponsors/GolfAI.png"
     },
     {
       title: "PLATFORM PARTNER",
@@ -61,7 +67,7 @@ export const sponsorsData = {
     {
       title: "PUBLISHING PARTNER",
       name: "Minisodas Labs",
-      url: "https://minisodas.com/",
+      url: "https://labs.minisodas.com/waitlist-vp6ukbhackcbskronos",
       img: "/assets/img/sponsors/minisodas_labs.png"
     }
   ],
