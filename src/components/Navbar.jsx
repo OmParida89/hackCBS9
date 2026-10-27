@@ -4,7 +4,7 @@ const NAV_ITEMS = [
   { id: 'about', label: 'ABOUT' },
   { id: 'themes', label: 'THEMES' },
   { id: 'prizes', label: 'PRIZES' },
-  // { id: 'schedule', label: 'SCHEDULE' },
+  { id: 'schedule', label: 'SCHEDULE' },
   { id: 'sponsors', label: 'SPONSORS' },
   { id: 'teams', label: 'TEAM' },
   { id: 'faq', label: "FAQ's" },
