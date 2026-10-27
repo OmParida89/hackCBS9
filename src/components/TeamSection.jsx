@@ -9,6 +9,7 @@ function CrewGrid({ members }) {
           <img loading="lazy" decoding="async" src={member.img} alt={member.name} className="crew-photo" />
           <p className="crew-name">{member.name}</p>
           <h5 className="crew-role">{member.role}</h5>
+          {member.phone && <p className="crew-phone">{member.phone}</p>}
           <a
             className="crew-linkedin"
             href={member.linkedin}
@@ -82,6 +83,12 @@ export default function TeamSection() {
           margin: 8px 0 0;
           font-size: 17px;
           line-height: 1.5;
+          color: #c5c5c5;
+        }
+
+        .crew-phone {
+          margin: 8px 0 0;
+          font-size: 16px;
           color: #c5c5c5;
         }
 

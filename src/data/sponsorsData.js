@@ -85,17 +85,17 @@ export const sponsorsData = {
       img: "/assets/img/sponsors/prune.png"
     },
     {
+      title: "DOMAIN PARTNER",
+      name: ".xyz",
+      url: "https://gen.xyz/",
+      img: "/assets/img/sponsors/xyz.png"
+    },
+    {
       title: "ECOSYSTEM PARTNER",
       name: "Solari",
       url: "https://www.getsolari.com/",
       img: "/assets/img/sponsors/Solari.png",
       className: "solari-section"
-    },
-    {
-      title: "DOMAIN PARTNER",
-      name: ".xyz",
-      url: "https://gen.xyz/",
-      img: "/assets/img/sponsors/xyz.jpg"
     },
     {
       title: "EDITOR PARTNER",
@@ -105,16 +105,16 @@ export const sponsorsData = {
       className: "sublime-section"
     },
     {
+      title: "VOICE AI PARTNER",
+      name: "ElevenLabs",
+      url: "https://elevenlabs.io/",
+      img: "/assets/img/sponsors/elevenlabs.png"
+    },
+    {
       title: "AUTOMATION PARTNER",
       name: "n8n",
       url: "https://n8n.io/",
       img: "/assets/img/sponsors/n8n.png"
-    },
-    {
-      title: "AI GROWTH PARTNER",
-      name: "Tin Computers",
-      url: "https://tin.computer/",
-      img: "/assets/img/sponsors/TinComputers.png"
     },
     {
       title: "LEARNING PARTNER",
@@ -127,6 +127,12 @@ export const sponsorsData = {
       name: "Codecrafters",
       url: "https://codecrafters.io/",
       img: "/assets/img/sponsors/codecrafters.jpg"
+    },
+    {
+      title: "AI GROWTH PARTNER",
+      name: "Tin Computers",
+      url: "https://tin.computer/",
+      img: "/assets/img/sponsors/TinComputer.png"
     }
   ],
   eventPartners: [
