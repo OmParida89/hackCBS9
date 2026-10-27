@@ -51,16 +51,16 @@ export const sponsorsData = {
       img: "/assets/img/sponsors/Fueler.png"
     },
     {
-      title: "HIRING PARTNER",
-      name: "GolfAI",
-      url: "https://www.golfai.in/",
-      img: "/assets/img/sponsors/GolfAI.png"
-    },
-    {
       title: "PLATFORM PARTNER",
       name: "HackCulture",
       url: "https://hackculture.io/",
       img: "/assets/img/sponsors/HackCulture.png"
+    },
+    {
+      title: "HIRING PARTNER",
+      name: "GolfAI",
+      url: "https://www.golfai.in/",
+      img: "/assets/img/sponsors/GolfAI.png"
     },
     {
       title: "MEDIA PARTNER",
@@ -111,16 +111,22 @@ export const sponsorsData = {
       img: "/assets/img/sponsors/n8n.png"
     },
     {
-      title: "LEARNING PARTNER",
-      name: "Codecrafters",
-      url: "https://codecrafters.io/",
-      img: "/assets/img/sponsors/codecrafters.jpg"
-    },
-    {
       title: "AI GROWTH PARTNER",
       name: "Tin Computers",
       url: "https://tin.computer/",
       img: "/assets/img/sponsors/TinComputers.png"
+    },
+    {
+      title: "LEARNING PARTNER",
+      name: "Mastra AI",
+      url: "https://mastra.ai/",
+      img: "/assets/img/sponsors/MastraAI.png"
+    },
+    {
+      title: "LEARNING PARTNER",
+      name: "Codecrafters",
+      url: "https://codecrafters.io/",
+      img: "/assets/img/sponsors/codecrafters.jpg"
     }
   ],
   eventPartners: [

@@ -4626,3 +4626,56 @@ lord-icon {
         flex-basis: var(--sponsor-card-width);
     }
 }
+
+/* Keep the requested partner groups compact while preserving their layout. */
+#sponsors .career-partners-grid .img,
+#sponsors .hiring-partner-section .img,
+#sponsors .publishing-section .img,
+#sponsors .media-partner-section .img,
+#sponsors .hackculture-section .img{
+    width: min(391px, calc(100vw - 60px));
+    max-width: 391px;
+    height: 119px;
+    min-height: 119px;
+    padding: 17px 34px;
+}
+
+#sponsors .career-partners-grid .img img,
+#sponsors .hiring-partner-section .img img,
+#sponsors .publishing-section .img img,
+#sponsors .media-partner-section .img img,
+#sponsors .hackculture-section .img img{
+    width: min(323px, 100%);
+    height: 85px;
+}
+
+#sponsors .additional-partners-grid .img{
+    width: min(345px, calc(100vw - 60px));
+    max-width: 345px;
+    height: 105px;
+    min-height: 105px;
+    padding: 15px 30px;
+}
+
+#sponsors .additional-partners-grid .img img{
+    width: min(285px, 100%);
+    height: 75px;
+}
+
+#sponsors .partner-section,
+#sponsors .career-partners-grid,
+#sponsors .additional-partners-grid{
+    grid-template-columns: repeat(2, minmax(0, auto));
+}
+
+@media screen and (max-width:1000px) {
+    #sponsors .partner-section,
+    #sponsors .career-partners-grid,
+    #sponsors .additional-partners-grid{
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    #sponsors .career-partners-grid .img:last-child{
+        width: min(391px, calc(100vw - 60px));
+    }
+}

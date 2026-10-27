@@ -172,7 +172,7 @@ export default function SponsorsSection() {
           {sponsorsData.categoryPartners
             .filter((sponsor) => sponsor.name === 'Logitech')
             .map((sponsor) => (
-              <div className="section web3-section" key={sponsor.name}>
+              <div className="section web3-section platform-partner-section" key={sponsor.name}>
                 <div className="heading" data-aos="fade-up" data-aos-duration="1000">
                   {sponsor.title}
                 </div>
@@ -230,31 +230,12 @@ export default function SponsorsSection() {
                   </a>
                 ))}
             </div>
-            {sponsorsData.categoryPartners
-              .filter((sponsor) => sponsor.name === 'GolfAI')
-              .map((sponsor) => (
-                <div className="hiring-partner-section" key={sponsor.name}>
-                  <div className="heading" data-aos="fade-up" data-aos-duration="1000">
-                    {sponsor.title}
-                  </div>
-                  <a
-                    href={sponsor.url}
-                    className="img"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    data-aos="fade-up"
-                    data-aos-duration="1000"
-                  >
-                    <SponsorLogo sponsor={sponsor} />
-                  </a>
-                </div>
-              ))}
           </div>
 
           {sponsorsData.categoryPartners
             .filter((sponsor) => sponsor.name === 'HackCulture')
             .map((sponsor) => (
-              <div className="section web3-section" key={sponsor.name}>
+              <div className="section web3-section hackculture-section" key={sponsor.name}>
                 <div className="heading" data-aos="fade-up" data-aos-duration="1000">
                   {sponsor.title}
                 </div>
@@ -288,6 +269,26 @@ export default function SponsorsSection() {
               </a>
             </div>
           ))}
+
+          {sponsorsData.categoryPartners
+            .filter((sponsor) => sponsor.name === 'GolfAI')
+            .map((sponsor) => (
+              <div className="hiring-partner-section" key={sponsor.name}>
+                <div className="heading" data-aos="fade-up" data-aos-duration="1000">
+                  {sponsor.title}
+                </div>
+                <a
+                  href={sponsor.url}
+                  className="img"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                >
+                  <SponsorLogo sponsor={sponsor} />
+                </a>
+              </div>
+            ))}
 
           <div className="additional-partners-grid">
             {sponsorsData.twoColumnPartners.map((partner) => (
