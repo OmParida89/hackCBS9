@@ -59,7 +59,7 @@ export const sponsorsData = {
     {
       title: "HIRING PARTNER",
       name: "GolfAI",
-      url: "https://www.golfai.in/",
+      url: "https://challenge.golfai.in/",
       img: "/assets/img/sponsors/GolfAI.png"
     },
     {
