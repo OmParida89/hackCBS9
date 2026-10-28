@@ -66,12 +66,18 @@ export default function Navbar() {
     <header>
       <div className="nav-container">
         <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
-          <a href="#" className="nav-branding">
+          <a href="#" className="nav-branding nav-branding-pair">
             <img
               loading="lazy"
               decoding="async"
               src="/assets/img/9.0_assets/hackCBS9.0_logo_coloured.png"
               alt="hackCBS 9.0 Logo"
+            />
+            <img
+              loading="lazy"
+              decoding="async"
+              src="/assets/img/9.0_assets/SSCBS-logo.png"
+              alt="SSCBS Logo"
             />
           </a>
 

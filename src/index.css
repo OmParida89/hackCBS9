@@ -5,6 +5,27 @@
   padding: 0;
 }
 
+.navbar .nav-branding-pair {
+  display: flex;
+  width: auto;
+  height: 80px;
+  aspect-ratio: auto;
+  align-items: center;
+  gap: 12px;
+  overflow: visible;
+}
+
+.navbar .nav-branding-pair img {
+  width: 76px;
+  height: 76px;
+  object-fit: contain;
+}
+
+.navbar .nav-branding-pair img:last-child {
+  width: 58px;
+  height: 58px;
+}
+
 .sponsor-logo-text {
   display: block;
   color: #151515;
