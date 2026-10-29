@@ -4,7 +4,8 @@ import {
   specialHacks,
   base44Prizes,
   qyrusPrizes,
-  mlhPrizes
+  mlhPrizes,
+  sponsoredTracks
 } from '../data/prizesData';
 
 // revealDelay/revealEasing stagger the entrance so 2nd & 3rd rise first and
@@ -240,6 +241,59 @@ function MlhPrizeGrid({ items }) {
           </div>
         </article>
       ))}
+    </div>
+  );
+}
+
+function SponsoredTracks() {
+  const [ref, inView] = useInView(0.15);
+
+  return (
+    <div className={`sponsored-tracks${inView ? ' sponsored-tracks-visible' : ''}`} ref={ref}>
+      <div className="yugabyte-banner">
+        <div className="yugabyte-banner-heading">
+          <div className="sponsor-logo-badge">
+            <img src={sponsoredTracks.yugabyteLogo} alt="YugabyteDB" />
+          </div>
+          <span>EXCLUSIVE PROBLEM STATEMENT</span>
+          <em>“{sponsoredTracks.yugabyteChallenge}”</em>
+        </div>
+        <div className="sponsored-yugabyte-grid">
+          {sponsoredTracks.yugabyte.map((track) => (
+            <article
+              className="sponsored-prize-card"
+              key={track.title}
+              style={{ '--sponsor-accent': track.accent }}
+            >
+              <span className="sponsored-prize-medal" aria-hidden="true">✦</span>
+              <p className="sponsored-prize-rank">{track.title}</p>
+              <h4>{track.prize}</h4>
+              <p>{track.detail}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+
+      <article
+        className="iomete-card"
+        style={{ '--sponsor-accent': sponsoredTracks.iomete.accent }}
+      >
+        <div className="iomete-card-heading">
+          <div className="sponsor-logo-badge iomete-logo">
+            <img src={sponsoredTracks.iometeLogo} alt="IOMETE" />
+          </div>
+        </div>
+        <p className="iomete-eyebrow">{sponsoredTracks.iomete.eyebrow}</p>
+        <p className="iomete-quote">“{sponsoredTracks.iomete.title}”</p>
+        <div className="iomete-prize">
+          <span className="sponsored-prize-medal" aria-hidden="true">★</span>
+          <div>
+            <span className="iomete-prize-label">PRIZE</span>
+            <strong>{sponsoredTracks.iomete.prize}</strong>
+            <span>{sponsoredTracks.iomete.detail}</span>
+          </div>
+        </div>
+      </article>
     </div>
   );
 }
@@ -757,6 +811,300 @@ export default function PrizesSection() {
           color: var(--mlh-accent);
         }
 
+        .sponsored-tracks {
+          max-width: 1080px;
+          margin: 0 auto;
+          opacity: 0;
+          transform: translateY(18px);
+          transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .sponsored-tracks-visible {
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+        .sponsored-yugabyte-grid {
+          display: grid;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 24px;
+        }
+
+        .yugabyte-banner {
+          position: relative;
+          overflow: hidden;
+          padding: 22px 24px 24px;
+          border: 1px solid rgba(255, 132, 45, 0.84);
+          border-radius: 22px;
+          background:
+            radial-gradient(circle at 50% 30%, rgba(196, 74, 12, 0.52), transparent 48%),
+            linear-gradient(145deg, #431b0d 0%, #150c0b 88%);
+          box-shadow: 0 12px 30px rgba(0, 0, 0, 0.36);
+        }
+
+        .yugabyte-banner::before {
+          position: absolute;
+          top: 0;
+          right: 0;
+          left: 0;
+          height: 4px;
+          background: linear-gradient(90deg, #f56b18, #ffd166, #f56b18);
+          box-shadow: 0 0 22px rgba(255, 120, 35, 0.9);
+          content: '';
+        }
+
+        .yugabyte-banner-heading {
+          position: relative;
+          z-index: 1;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 5px;
+          margin-bottom: 18px;
+          text-align: center;
+        }
+
+        .sponsor-logo-badge {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 172px;
+          height: 40px;
+          box-sizing: border-box;
+          margin-bottom: 4px;
+          padding: 5px 13px;
+          border-radius: 999px;
+          background: #fff;
+          box-shadow: 0 5px 18px rgba(0, 0, 0, 0.3);
+        }
+
+        .sponsor-logo-badge img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+
+        .yugabyte-banner-heading > span {
+          color: rgba(255, 255, 255, 0.82);
+          font-size: 9px;
+          font-weight: 700;
+          letter-spacing: 1.4px;
+        }
+
+        .yugabyte-banner-heading > em {
+          color: #ffbd70;
+          font-family: 'F1Font', 'Work Sans', sans-serif;
+          font-size: clamp(16px, 2.4vw, 23px);
+          font-style: italic;
+          line-height: 1.2;
+        }
+
+        .sponsored-prize-card,
+        .iomete-card {
+          position: relative;
+          overflow: hidden;
+          border: 1px solid color-mix(in srgb, var(--sponsor-accent) 72%, #5b2631);
+          border-radius: 20px;
+          background:
+            radial-gradient(circle at 85% 12%, color-mix(in srgb, var(--sponsor-accent) 28%, transparent), transparent 38%),
+            linear-gradient(145deg, #28121d 0%, #0c0a12 82%);
+          box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .sponsored-prize-card::before,
+        .iomete-card::before {
+          position: absolute;
+          top: 0;
+          right: 0;
+          left: 0;
+          height: 4px;
+          background: var(--sponsor-accent);
+          box-shadow: 0 0 20px var(--sponsor-accent);
+          content: '';
+        }
+
+        .sponsored-prize-card::after,
+        .iomete-card::after {
+          position: absolute;
+          right: -60px;
+          bottom: -90px;
+          width: 220px;
+          height: 220px;
+          border: 1px solid color-mix(in srgb, var(--sponsor-accent) 32%, transparent);
+          border-radius: 50%;
+          box-shadow: 0 0 0 20px color-mix(in srgb, var(--sponsor-accent) 7%, transparent);
+          content: '';
+          pointer-events: none;
+        }
+
+        .sponsored-prize-card:hover,
+        .sponsored-prize-card:focus-within,
+        .iomete-card:hover {
+          transform: translateY(-7px) scale(1.02);
+          box-shadow:
+            0 0 0 1px color-mix(in srgb, var(--sponsor-accent) 80%, transparent),
+            0 0 32px 4px color-mix(in srgb, var(--sponsor-accent) 38%, transparent),
+            0 18px 34px rgba(0, 0, 0, 0.42);
+        }
+
+        .sponsored-prize-card {
+          min-height: 190px;
+          padding: 18px 20px 20px;
+          text-align: center;
+        }
+
+        .sponsored-prize-medal {
+          position: relative;
+          z-index: 1;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 32px;
+          height: 32px;
+          margin: 0 auto 10px;
+          border: 5px solid rgba(255, 222, 185, 0.72);
+          border-radius: 50%;
+          background: color-mix(in srgb, var(--sponsor-accent) 75%, #fff);
+          color: #6b2738;
+          font-size: 16px;
+          box-shadow: 0 0 16px color-mix(in srgb, var(--sponsor-accent) 45%, transparent);
+        }
+
+        .sponsored-prize-rank {
+          position: relative;
+          z-index: 1;
+          margin: 0 0 10px;
+          color: var(--sponsor-accent);
+          font-family: 'F1Font', sans-serif;
+          font-size: 14px;
+          letter-spacing: 1px;
+        }
+
+        .sponsored-prize-card h4 {
+          position: relative;
+          z-index: 1;
+          margin: 0 0 10px;
+          color: #ffe2ae;
+          font-family: 'F1Font', 'Work Sans', sans-serif;
+          font-size: 23px;
+          line-height: 1.15;
+          text-shadow: 0 0 16px color-mix(in srgb, var(--sponsor-accent) 48%, transparent);
+        }
+
+        .sponsored-prize-card p:last-child {
+          position: relative;
+          z-index: 1;
+          margin: 0;
+          color: rgba(255, 255, 255, 0.78);
+          font-size: 13px;
+          font-style: italic;
+          letter-spacing: 0.5px;
+          text-transform: uppercase;
+        }
+
+        .iomete-card {
+          margin-top: 16px;
+          max-width: 780px;
+          margin-right: auto;
+          margin-left: auto;
+          padding: 15px 28px 18px;
+          text-align: center;
+        }
+
+        .iomete-card-heading {
+          position: relative;
+          z-index: 1;
+          display: flex;
+          flex-direction: column-reverse;
+          align-items: center;
+          gap: 9px;
+        }
+
+        .iomete-card-heading span {
+          color: rgba(255, 255, 255, 0.7);
+          font-size: 11px;
+          letter-spacing: 1.6px;
+        }
+
+        .iomete-logo {
+          width: 126px;
+          height: 34px;
+          min-width: 0;
+          margin-bottom: 0;
+        }
+
+        .iomete-quote {
+          position: relative;
+          z-index: 1;
+          margin: 11px 0 8px;
+          color: #ffd18e;
+          font-family: 'F1Font', 'Work Sans', sans-serif;
+          font-size: clamp(16px, 2.2vw, 21px);
+          font-style: italic;
+          line-height: 1.2;
+        }
+
+        .iomete-eyebrow {
+          position: relative;
+          z-index: 1;
+          margin: 8px 0 0;
+          color: rgba(255, 255, 255, 0.7);
+          font-size: 13px;
+          letter-spacing: 0.4px;
+        }
+
+        .iomete-prize {
+          position: relative;
+          z-index: 1;
+          display: inline-flex;
+          align-items: center;
+          gap: 10px;
+          min-width: min(440px, 100%);
+          box-sizing: border-box;
+          padding: 7px 12px;
+          border: 1px solid color-mix(in srgb, var(--sponsor-accent) 65%, transparent);
+          border-radius: 14px;
+          background: rgba(62, 18, 30, 0.65);
+          text-align: left;
+        }
+
+        .iomete-prize .sponsored-prize-medal {
+          flex: 0 0 auto;
+          width: 28px;
+          height: 28px;
+          margin: 0;
+          border-width: 3px;
+          font-size: 14px;
+        }
+
+        .iomete-prize > div {
+          display: flex;
+          flex-direction: column;
+          gap: 3px;
+        }
+
+        .iomete-prize-label {
+          color: var(--sponsor-accent);
+          font-size: 10px;
+          font-weight: 800;
+          letter-spacing: 1.5px;
+        }
+
+        .iomete-prize strong {
+          color: #fff0cf;
+          font-family: 'F1Font', 'Work Sans', sans-serif;
+          font-size: 16px;
+          font-weight: normal;
+        }
+
+        .iomete-prize div > span:last-child {
+          color: rgba(255, 255, 255, 0.68);
+          font-size: 12px;
+          text-transform: uppercase;
+        }
+
         @media (max-width: 992px) {
           .mlh-prize-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
           .podium-grid {
@@ -778,6 +1126,9 @@ export default function PrizesSection() {
 
         @media (max-width: 600px) {
           .mlh-prize-grid { grid-template-columns: 1fr; }
+          .sponsored-yugabyte-grid { grid-template-columns: 1fr; }
+          .iomete-card { padding: 30px 20px; }
+          .iomete-prize { min-width: 0; width: 100%; }
           .mlh-prize-card:hover,
           .mlh-prize-card:focus-within { transform: translateY(-5px) scale(1.02); }
         }
@@ -818,6 +1169,15 @@ export default function PrizesSection() {
           </h3>
         </div>
         <MlhPrizeGrid items={mlhPrizes} />
+      </div>
+
+      <div className="container mt-5">
+        <div className="section_title">
+          <h3 className="title-dark" data-aos="fade-right" data-aos-duration="1000">
+            SPONSORED TRACKS
+          </h3>
+        </div>
+        <SponsoredTracks />
       </div>
 
       {/* Base44 Track */}

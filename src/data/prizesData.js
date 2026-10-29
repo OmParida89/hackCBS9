@@ -165,3 +165,30 @@ export const mlhPrizes = [
     accent: "#14F195",
   }
 ];
+
+export const sponsoredTracks = {
+  yugabyteLogo: "/assets/img/sponsors/yugabyteDB.png",
+  iometeLogo: "/assets/img/sponsors/IOMETE.png",
+  yugabyte: [
+    {
+      title: "1ST PRIZE",
+      prize: "₹50,000",
+      detail: "Cash Prize",
+      accent: "#ff9d3f"
+    },
+    {
+      title: "2ND PRIZE",
+      prize: "Awesome Tech Gadgets",
+      detail: "For the first runner-up team",
+      accent: "#ffb36b"
+    }
+  ],
+  yugabyteChallenge: "Outstanding AI Agent Innovation",
+  iomete: {
+    eyebrow: "An exclusive challenge",
+    title: "Make Complex Tech Easy to Buy",
+    prize: "Mechanical Keyboards",
+    detail: "For the TOP 2 winning teams",
+    accent: "#ffb56b"
+  }
+};
